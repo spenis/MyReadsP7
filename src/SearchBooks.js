@@ -1,6 +1,7 @@
 import React , { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Book from './Book'
+
 import * as BooksAPI from './BooksAPI'
 import { DebounceInput } from 'react-debounce-input'
 
@@ -50,16 +51,13 @@ class SearchBooks extends Component {
     const {books,query} = this.state
     return (
       <div className="search-books">
-        <div className="search-books-bar">
-
-          <Link 
-          to="/" className="close-search">Close</Link>
-          <div className="search-books-input-wrapper">
-            <DebounceInput  minLength={1} placeholder="Search by title or author" onChange={(e) => this.search(e.target.value)}/>
-          </div>
-        </div>
-
+      <div className="search-books-bar">
+        
       <div className="search-books-input-wrapper">
+      <DebounceInput  minLength={1} placeholder="Search by title or author" onChange={(e) => this.search(e.target.value)}/>
+      </div>
+      </div>
+
         {/*
           NOTES: The search from BooksAPI is limited to a particular set of search terms.
           You can find these search terms here:
