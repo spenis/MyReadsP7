@@ -72,9 +72,7 @@ class SearchBooks extends Component {
         	value={this.state.query}
         	onChange={(event) => this.updateQuery(event.target.value)}
         />
-      </div>
     
-
         <div className="search-books-results">
           <ol className="books-grid">
             {books.length>0 ? 
