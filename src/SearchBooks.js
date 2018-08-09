@@ -52,7 +52,7 @@ class SearchBooks extends Component {
     return (
       <div className="search-books">
       <div className="search-books-bar">
-        
+      <Link to="/" className="close-search">Close</Link>  
       <div className="search-books-input-wrapper">
       <DebounceInput  minLength={1} placeholder="Search by title or author" onChange={(e) => this.search(e.target.value)}/>
       </div>
